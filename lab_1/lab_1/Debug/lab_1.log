@@ -1,8 +1,12 @@
 ﻿  lab_1.cpp
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(57,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(83,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(95,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(106,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(118,17): error C2664:  "void out(timedelta *,int)": невозможно преобразовать аргумент 1 из "timedelta" в "timedelta *"
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(118,12): message :  Для выполнения данного преобразования нет доступного оператора преобразования, определенного пользователем, или вызов оператора невозможен
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(123,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(64,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(90,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(102,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(113,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(129,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(152,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(165,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(177,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(256,24): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(315): warning C4715:  den: значение возвращается не при всех путях выполнения
+  lab_1.vcxproj -> D:\pril\project\3 sem\cplus\lab_1\Debug\lab_1.exe

@@ -1,7 +1,7 @@
 ﻿// lab_1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
-#include "pch.h"
+
 #include <iostream>
 #include <math.h>
 #include <fstream>
@@ -31,7 +31,14 @@ struct timedelta {
 	int hours = 0;
 };
 void mus(datetime, timedelta);
-void out(timedelta* Arr2, int ll);
+void out(timedelta*& Arr2, int ll );
+void outt(datetime*& Arr, int l);
+void sleds(timedelta*& Arr2, int ll);
+void sledd(datetime*& Ar1r2, int l);
+void predd(timedelta*& Arr2, int ll);
+void preds(datetime*& Arr, int l);
+void var1(datetime*& Arr, int l);
+int den(int s, int a);
 int main()
 {
 
@@ -114,12 +121,34 @@ int main()
 	}
 
 	////////////////////////////////////////////////////////////////////////////////
+	out(Arr2, ll);
+	
+	string x1;
+	datetime s1;
+	datetime* Ar1r2 = new datetime[l];
+	for (size_t i = 0; i < l; i++)
+	{
+		istringstream iss(x1);//поток ввода
+		s1.day = Arr[i].day; s1.month = Arr[i].month;  s1.year = Arr[i].year;  s1.seconds = Arr[i].seconds; s1.minutes = Arr[i].minutes; s1.hours = Arr[i].hours;
+	}
+	outt(Ar1r2, l);
+	//sledd(Arr, l);
+	outt(Ar1r2, l);
+	/////////////////////////////
+	int a = -1;
+	while (a!=0)
+	{
+		cout << "Выберете действие:"<<endl<<"1)Вывод timedelta" << endl << "2)Вывод datetime" << endl << "0)Выход"<<endl;
+		cin >> a;
+		if(a == 1){ out(Arr2, ll); }
+		if (a == 2) { outt(Arr, l); }
+	}
 
-	out(Arr2[0], ll);
 }
 
-void out(timedelta* Arr2, int ll)
+void out(timedelta*& Arr2, int ll)
 {
+	cout << "1231232131"<<endl;
 	for (size_t n = 0; n < ll; n++)
 	{
 		cout << "day : " << Arr2[n].day << " "
@@ -130,6 +159,183 @@ void out(timedelta* Arr2, int ll)
 			<< "hours : " << Arr2[n].hours << endl;
 	}
 }
+void outt(datetime*& Arr, int l)
+{
+	cout << "1231232131" << endl;
+	for (size_t n = 0; n < l; n++)
+	{
+		cout << "day : " << Arr[n].day << " "
+			<< "month : " << Arr[n].month << " "
+			<< "year : " << Arr[n].year << " "
+			<< "seconds : " << Arr[n].seconds << " "
+			<< "minutes : " << Arr[n].minutes << " "
+			<< "hours : " << Arr[n].hours << endl;
+	}
+}
+void var1(datetime*& Arr, int l)
+{
+	for (size_t n = 0; n < l; n++)
+	{
+	
+		if (Arr[n].month != 2) { if (Arr[n].month == 1 || Arr[n].month == 3 || Arr[n].month == 5 || Arr[n].month == 7 || Arr[n].month == 8 || Arr[n].month == 10 || Arr[n].month == 12) { if (Arr[n].day == 31) {
+			cout << "day : " << Arr[n].day << " "
+				<< "month : " << Arr[n].month << " "
+				<< "year : " << Arr[n].year << " "
+				<< "seconds : " << Arr[n].seconds << " "
+				<< "minutes : " << Arr[n].minutes << " "
+				<< "hours : " << Arr[n].hours << endl;
+		} }
+		else { if (Arr[n].day == 30) {
+			cout << "day : " << Arr[n].day << " "
+				<< "month : " << Arr[n].month << " "
+				<< "year : " << Arr[n].year << " "
+				<< "seconds : " << Arr[n].seconds << " "
+				<< "minutes : " << Arr[n].minutes << " "
+				<< "hours : " << Arr[n].hours << endl;
+		} }
+		}
+		else{
+			if (Arr[n].year / 4 == 0) {
+				if (Arr[n].year / 100 == 0) { if (Arr[n].year / 400 == 0) {
+					if (Arr[n].day == 29) {
+						cout << "day : " << Arr[n].day << " "
+							<< "month : " << Arr[n].month << " "
+							<< "year : " << Arr[n].year << " "
+							<< "seconds : " << Arr[n].seconds << " "
+							<< "minutes : " << Arr[n].minutes << " "
+							<< "hours : " << Arr[n].hours << endl;
+					}
+				} else {
+					if (Arr[n].day == 28) {
+						cout << "day : " << Arr[n].day << " "
+							<< "month : " << Arr[n].month << " "
+							<< "year : " << Arr[n].year << " "
+							<< "seconds : " << Arr[n].seconds << " "
+							<< "minutes : " << Arr[n].minutes << " "
+							<< "hours : " << Arr[n].hours << endl;
+					}
+				} }
+				else {
+					if (Arr[n].day == 29) {
+						cout << "day : " << Arr[n].day << " "
+							<< "month : " << Arr[n].month << " "
+							<< "year : " << Arr[n].year << " "
+							<< "seconds : " << Arr[n].seconds << " "
+							<< "minutes : " << Arr[n].minutes << " "
+							<< "hours : " << Arr[n].hours << endl;
+					}
+				}
+			}
+			else {
+				if (Arr[n].day == 28) {
+					cout << "day : " << Arr[n].day << " "
+						<< "month : " << Arr[n].month << " "
+						<< "year : " << Arr[n].year << " "
+						<< "seconds : " << Arr[n].seconds << " "
+						<< "minutes : " << Arr[n].minutes << " "
+						<< "hours : " << Arr[n].hours << endl;
+					cout << "следующая дата" << endl;
+					
+				}
+			}
+		}
+	}
+}
+void sleds(timedelta*& Arr2, int ll)
+{
+
+}
+void sledd(datetime*& Ar1r2, int l)
+{
+	int a=-1;
+	
+
+		//iss >> ss1.day >> ss1.month >> ss1.year >> ss1.seconds >> ss1.minutes >> ss1.hours;
+	
+		//Ar1r2[i] = ss1;
+		for (size_t n = 0; n < l; n++)
+		{
+			a = den(Ar1r2[n].month, Ar1r2[n].day);
+			if (a == 0) { Ar1r2[n].day += Ar1r2[n].day; }
+			else { if (Ar1r2[n].month == 12) { Ar1r2[n].year += Ar1r2[n].year; } Ar1r2[n].day += Ar1r2[n].day; Ar1r2[n].month += Ar1r2[n].month; }
+		}
+
+}
+void predd(timedelta*& Arr2, int ll)
+{
+	
+}
+void preds(datetime*& Arr, int l)
+{
+
+}
+
+int den(int s,int a)
+{
+	if (s != 2) {
+		if (s == 1 || s == 3 || s == 5 || s == 7 || s == 8 || s == 10 || s == 12) {
+			if (a == 31) {
+				return 1;
+			}
+		}
+		else {
+			if (a == 30) {
+				return 1;
+			}
+		}
+	}
+	else {
+		if (s / 4 == 0) {
+			if (s / 100 == 0) {
+				if (s / 400 == 0) {
+					if (a == 29) {
+						return 1;
+					}
+				}
+				else {
+					if (a == 28) {
+						return 1;
+					}
+				}
+			}
+			else {
+				if (a == 29) {
+					return 1;
+				}
+			}
+		}
+		else {
+			if (a == 28) {
+				return 1;
+
+			}
+		}
+	}
+
+}
+
+int vess(int s)
+{
+	if (s / 4 == 0) {
+		if (s / 100 == 0) {
+			if (s / 400 == 0) {
+				return 1;
+			}
+			else {
+				return 0;
+			}
+		}
+		else {
+			return 1;
+		}
+	}
+	else {
+		return 0;
+	}
+	return 0;
+}
+
+
 void mus(datetime, timedelta)
 {
 
