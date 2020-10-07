@@ -1,12 +1,11 @@
 ﻿  lab_1.cpp
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(64,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(90,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(102,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(113,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(129,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(152,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(165,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(177,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(256,24): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(315): warning C4715:  den: значение возвращается не при всех путях выполнения
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(65,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(91,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(103,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(114,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(134,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(157,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(170,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(182,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(301,24): warning C4018:  <: несоответствие типов со знаком и без знака
   lab_1.vcxproj -> D:\pril\project\3 sem\cplus\lab_1\Debug\lab_1.exe
