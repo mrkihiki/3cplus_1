@@ -36,10 +36,12 @@ void out(timedelta*& Arr2, int ll );
 void outt(datetime*& Arr, int l);
 void sleds(timedelta*& Arr2, int ll);
 void sledd(datetime*& Ar1r2, int l);
-void predd(timedelta*& Arr2, int ll);
-void preds(datetime*& Arr, int l);
+void predd(datetime*& Ar2r2, int l);
+void preds(timedelta*& Arr, int ll);
 void var1(datetime*& Arr, datetime*& Ar1r2, int l);
+int vess(int s);
 int den(int s, int a);
+int pden(int s, int a);
 int main()
 {
 
@@ -136,17 +138,28 @@ int main()
 		s1.day = Arr[i].day; s1.month = Arr[i].month;  s1.year = Arr[i].year;  s1.seconds = Arr[i].seconds; s1.minutes = Arr[i].minutes; s1.hours = Arr[i].hours;
 		Ar1r2[i] = s1;
 	}
+	string x2;
+	datetime s2;
+	datetime* Ar2r2 = new datetime[l];
+	for (size_t i = 0; i < l; i++)
+	{
+		s2.day = Arr[i].day; s2.month = Arr[i].month;  s2.year = Arr[i].year;  s2.seconds = Arr[i].seconds; s2.minutes = Arr[i].minutes; s2.hours = Arr[i].hours;
+		Ar2r2[i] = s2;
+	}
+	////////////////////////////////////////////////////////////////////////////
+	predd(Ar2r2, l);
 	sledd(Ar1r2, l);
 	/////////////////////////////
 	int a = -1;
 	while (a!=0)
 	{
-		cout << "Выберете действие:"<<endl<<"1)Вывод timedelta" << endl << "2)Вывод datetime" << endl << "3)Вывод следующий день datetime" << endl << "4)Вывод Var" << endl << "0)Выход"<<endl;
+		cout << "Выберете действие:"<<endl<<"1)Вывод timedelta" << endl << "2)Вывод datetime" << endl << "3)Вывод следующий день datetime" << endl << "4)Вывод предыдущей день datetime" << endl << "5)Вывод Var" << endl << "0)Выход"<<endl;
 		cin >> a;
 		if(a == 1){ out(Arr2, ll); }
 		if (a == 2) { outt(Arr, l); }
 		if (a == 3) { outt(Ar1r2, l); }
-		if (a == 4) { var1(Arr, Ar1r2, l); }
+		if (a == 4) { outt(Ar2r2, l); }
+		if (a == 5) { var1(Arr, Ar1r2, l); }
 	}
 
 }
@@ -306,11 +319,22 @@ void sledd(datetime*& Ar1r2, int l)
 		}
 
 }
-void predd(timedelta*& Arr2, int ll)
+void predd(datetime*& Ar2r2, int l)
 {
-	
+	int a = -1;
+
+
+	//iss >> ss1.day >> ss1.month >> ss1.year >> ss1.seconds >> ss1.minutes >> ss1.hours;
+
+	//Ar1r2[i] = ss1;
+	for (size_t n = 0; n < l; n++)
+	{
+		a = pden(Ar2r2[n].month, Ar2r2[n].day);
+		if (Ar2r2[n].day != 1) { Ar2r2[n].day -= 1; }
+		else { if (Ar2r2[n].month == 1) { Ar2r2[n].year -= 1;  Ar2r2[n].day = 31; Ar2r2[n].month = 12; } else { Ar2r2[n].day = a; Ar2r2[n].month -= 1; } }
+	}
 }
-void preds(datetime*& Arr, int l)
+void preds(timedelta*& Arr, int ll)
 {
 
 }
@@ -362,6 +386,34 @@ int den(int s,int a)
 			}
 			else { return 0; }
 		}
+	}
+
+}
+
+int pden(int s, int a)
+{
+	cout << "s = " << s << "a = " << a << endl;
+	if (s != 3) {
+		if (s == 5 || s == 7 || s == 10 || s == 12) {
+			if (a == 1) {
+				return 30;
+			}
+			else { return 0; }
+		}
+		else if(s == 2 || s == 4 || s == 6 || s == 8 || s == 9 || s == 11) {
+			if (a == 1) {
+				return 31;
+			}
+			else { return 0; }
+
+		}
+	}
+	else {
+		if (a == 1) {
+			if (vess(s) == 1) { return 29; }
+			else { return 28; }
+		}
+		else { return 0; }
 	}
 
 }
