@@ -6,6 +6,7 @@
 #include <math.h>
 #include <fstream>
 #include <string>
+#include <time.h>
 #include <stdio.h>
 #include <fstream>
 #include <sstream>
@@ -42,6 +43,8 @@ void var1(datetime*& Arr, datetime*& Ar1r2, int l);
 int vess(int s);
 int den(int s, int a);
 int pden(int s, int a);
+
+
 int main()
 {
 
@@ -100,37 +103,27 @@ int main()
 	}
 
 
-	cout << "Все квартиры: \n" << endl;
 
-	for (size_t n = 0; n < l; n++)
-	{
-		cout << "day : " << Arr[n].day << " "
-			<< "month : " << Arr[n].month << " "
-			<< "year : " << Arr[n].year << " "
-			<< "seconds : " << Arr[n].seconds << " "
-			<< "minutes : " << Arr[n].minutes << " "
-			<< "hours : " << Arr[n].hours << endl;
-	}
-	cout << "Все квартиры: \n" << endl;
-
-	for (size_t n = 0; n < ll; n++)
-	{
-		cout << "day : " << Arr2[n].day << " "
-			<< "month : " << Arr2[n].month << " "
-			<< "year : " << Arr2[n].year << " "
-			<< "seconds : " << Arr2[n].seconds << " "
-			<< "minutes : " << Arr2[n].minutes << " "
-			<< "hours : " << Arr2[n].hours << endl;
-	}
 
 	////////////////////////////////////////////////////////////////////////////////
-	out(Arr2, ll);
 
-	time_t now = time(0);
-	//tm* ltm = localtime_s(&now);
-	 //  cout << "Day: "<<  ltm->tm_mday << endl;
+	struct tm tim;
+	time_t tt = time(NULL);
+
+	localtime_s(&tim, &tt);
+
+	int theDay = tim.tm_mday;
+	int theMonth = tim.tm_mon;
+	int theYear = tim.tm_year + 1900;
+	int thesec = tim.tm_sec;
+	int theMen = tim.tm_min;
+	int thehe = tim.tm_hour;
+	datetime ls1;
+	datetime* LArr = new datetime[1];
+	ls1.day = tim.tm_mday; ls1.month = tim.tm_mon;  ls1.year = tim.tm_year + 1900;  ls1.seconds = tim.tm_sec; ls1.minutes = tim.tm_min; ls1.hours = tim.tm_hour;
+	LArr[0] = ls1;
+	outt(LArr, 1);
 	//////////////////////////////////////////////
-	string x1;
 	datetime s1;
 	datetime* Ar1r2 = new datetime[l];
 	for (size_t i = 0; i < l; i++)
@@ -138,7 +131,6 @@ int main()
 		s1.day = Arr[i].day; s1.month = Arr[i].month;  s1.year = Arr[i].year;  s1.seconds = Arr[i].seconds; s1.minutes = Arr[i].minutes; s1.hours = Arr[i].hours;
 		Ar1r2[i] = s1;
 	}
-	string x2;
 	datetime s2;
 	datetime* Ar2r2 = new datetime[l];
 	for (size_t i = 0; i < l; i++)
@@ -343,7 +335,7 @@ void preds(timedelta*& Arr, int ll)
 
 int den(int s,int a)
 {
-	cout << "s = " << s << "a = " << a << endl;
+
 	if (s != 2) {
 		if (s == 1 || s == 3 || s == 5 || s == 7 || s == 8 || s == 10 || s == 12) {
 			if (a == 31) {
@@ -394,7 +386,7 @@ int den(int s,int a)
 
 int pden(int s, int a)
 {
-	cout << "s = " << s << "a = " << a << endl;
+
 	if (s != 3) {
 		if (s == 5 || s == 7 || s == 10 || s == 12) {
 			if (a == 1) {
