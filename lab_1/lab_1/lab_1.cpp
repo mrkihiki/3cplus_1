@@ -169,6 +169,7 @@ void out(timedelta*& Arr2, int ll)
 	cout << "-------"<<endl;
 	for (size_t n = 0; n < ll; n++)
 	{
+		cout << n+1 << ")";
 		cout << "day : " << Arr2[n].day << " "
 			<< "month : " << Arr2[n].month << " "
 			<< "year : " << Arr2[n].year << " "
@@ -182,6 +183,7 @@ void outt(datetime*& Arr, int l)
 	cout << "--------" << endl;
 	for (size_t n = 0; n < l; n++)
 	{
+		cout << n+1 << ")";
 		cout << "day : " << Arr[n].day << " "
 			<< "month : " << Arr[n].month << " "
 			<< "year : " << Arr[n].year << " "
@@ -194,7 +196,7 @@ void var1(datetime*& Arr, datetime*& Ar1r2, int l)
 {
 	for (size_t n = 0; n < l; n++)
 	{
-	
+	 
 		if (Arr[n].month != 2) { if (Arr[n].month == 1 || Arr[n].month == 3 || Arr[n].month == 5 || Arr[n].month == 7 || Arr[n].month == 8 || Arr[n].month == 10 || Arr[n].month == 12) { if (Arr[n].day == 31) {
 			cout << "day : " << Arr[n].day << " "
 				<< "month : " << Arr[n].month << " "
@@ -208,7 +210,7 @@ void var1(datetime*& Arr, datetime*& Ar1r2, int l)
 				<< "year : " << Ar1r2[n].year << " "
 				<< "seconds : " << Ar1r2[n].seconds << " "
 				<< "minutes : " << Ar1r2[n].minutes << " "
-				<< "hours : " << Ar1r2[n].hours << endl;
+				<< "hours : " << Ar1r2[n].hours << endl << endl;
 		} }
 		else { if (Arr[n].day == 30) {
 			cout << "day : " << Arr[n].day << " "
@@ -223,7 +225,7 @@ void var1(datetime*& Arr, datetime*& Ar1r2, int l)
 				<< "year : " << Ar1r2[n].year << " "
 				<< "seconds : " << Ar1r2[n].seconds << " "
 				<< "minutes : " << Ar1r2[n].minutes << " "
-				<< "hours : " << Ar1r2[n].hours << endl;
+				<< "hours : " << Ar1r2[n].hours << endl << endl;
 		} }
 		}
 		else{
@@ -242,7 +244,7 @@ void var1(datetime*& Arr, datetime*& Ar1r2, int l)
 							<< "year : " << Ar1r2[n].year << " "
 							<< "seconds : " << Ar1r2[n].seconds << " "
 							<< "minutes : " << Ar1r2[n].minutes << " "
-							<< "hours : " << Ar1r2[n].hours << endl;
+							<< "hours : " << Ar1r2[n].hours << endl << endl;
 					}
 				} else {
 					if (Arr[n].day == 28) {
@@ -258,7 +260,7 @@ void var1(datetime*& Arr, datetime*& Ar1r2, int l)
 							<< "year : " << Ar1r2[n].year << " "
 							<< "seconds : " << Ar1r2[n].seconds << " "
 							<< "minutes : " << Ar1r2[n].minutes << " "
-							<< "hours : " << Ar1r2[n].hours << endl;
+							<< "hours : " << Ar1r2[n].hours << endl << endl;
 					}
 				} }
 				else {
@@ -275,7 +277,7 @@ void var1(datetime*& Arr, datetime*& Ar1r2, int l)
 							<< "year : " << Ar1r2[n].year << " "
 							<< "seconds : " << Ar1r2[n].seconds << " "
 							<< "minutes : " << Ar1r2[n].minutes << " "
-							<< "hours : " << Ar1r2[n].hours << endl;
+							<< "hours : " << Ar1r2[n].hours << endl << endl;
 					}
 				}
 			}
