@@ -1,12 +1,12 @@
 ﻿  lab_1.cpp
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(70,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(96,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(129,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(136,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(162,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(176,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(32,24): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(42,24): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(88,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(114,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(142,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(149,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(175,23): warning C4018:  <: несоответствие типов со знаком и без знака
 D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(189,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(308,24): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(324,23): warning C4018:  <: несоответствие типов со знаком и без знака
-D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(413): warning C4715:  pden: значение возвращается не при всех путях выполнения
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(202,23): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\pril\project\3 sem\cplus\lab_1\lab_1\lab_1.cpp(387): warning C4715:  pden: значение возвращается не при всех путях выполнения
   lab_1.vcxproj -> D:\pril\project\3 sem\cplus\lab_1\Debug\lab_1.exe

@@ -15,6 +15,10 @@
 
 using namespace std;
 
+int vess(int s);
+int den(int s, int a, int g);
+int pden(int s, int a, int g);
+
 struct datetime {
 	int day = 0;
 	int month = 0;
@@ -22,6 +26,26 @@ struct datetime {
 	int seconds = 0;
 	int minutes = 0;
 	int hours = 0;
+	void method(datetime*& Ar1r2, int l)
+	{
+		int a = -1;
+		for (size_t n = 0; n < l; n++)
+		{
+			a = den(Ar1r2[n].month, Ar1r2[n].day, Ar1r2[n].year);
+			if (a == 0) { Ar1r2[n].day += 1; }
+			else { if (Ar1r2[n].month == 12) { Ar1r2[n].year += 1;  Ar1r2[n].day = 1; Ar1r2[n].month = 1; } else { Ar1r2[n].day = 1; Ar1r2[n].month += 1; } }
+		}
+	}
+	void predd(datetime*& Ar2r2, int l)
+	{
+		int a = -1;
+		for (size_t n = 0; n < l; n++)
+		{
+			a = pden(Ar2r2[n].month, Ar2r2[n].day, Ar2r2[n].year);
+			if (Ar2r2[n].day != 1) { Ar2r2[n].day -= 1; }
+			else { if (Ar2r2[n].month == 1) { Ar2r2[n].year -= 1;  Ar2r2[n].day = 31; Ar2r2[n].month = 12; } else { Ar2r2[n].day = a; Ar2r2[n].month -= 1; } }
+		}
+	}
 };
 
 struct timedelta {
@@ -32,17 +56,11 @@ struct timedelta {
 	int minutes = 0;
 	int hours = 0;
 };
+
 void mus(datetime, timedelta);
-void out(timedelta*& Arr2, int ll );
+void out(timedelta*& Arr2, int ll);
 void outt(datetime*& Arr, int l);
-void sleds(timedelta*& Arr2, int ll);
-void sledd(datetime*& Ar1r2, int l);
-void predd(datetime*& Ar2r2, int l);
-void preds(timedelta*& Arr, int ll);
 void var1(datetime*& Arr, datetime*& Ar1r2, int l);
-int vess(int s);
-int den(int s, int a);
-int pden(int s, int a);
 
 
 int main()
@@ -112,15 +130,10 @@ int main()
 
 	localtime_s(&tim, &tt);
 
-	int theDay = tim.tm_mday;
-	int theMonth = tim.tm_mon;
-	int theYear = tim.tm_year + 1900;
-	int thesec = tim.tm_sec;
-	int theMen = tim.tm_min;
-	int thehe = tim.tm_hour;
+
 	datetime ls1;
 	datetime* LArr = new datetime[1];
-	ls1.day = tim.tm_mday; ls1.month = tim.tm_mon;  ls1.year = tim.tm_year + 1900;  ls1.seconds = tim.tm_sec; ls1.minutes = tim.tm_min; ls1.hours = tim.tm_hour;
+	ls1.day = tim.tm_mday; ls1.month = tim.tm_mon+1;  ls1.year = tim.tm_year + 1900;  ls1.seconds = tim.tm_sec; ls1.minutes = tim.tm_min; ls1.hours = tim.tm_hour;
 	LArr[0] = ls1;
 	outt(LArr, 1);
 	//////////////////////////////////////////////
@@ -139,8 +152,8 @@ int main()
 		Ar2r2[i] = s2;
 	}
 	////////////////////////////////////////////////////////////////////////////
-	predd(Ar2r2, l);
-	sledd(Ar1r2, l);
+	s1.predd(Ar2r2, l);
+	s2.method(Ar1r2, l);
 	/////////////////////////////
 	int a = -1;
 	while (a!=0)
@@ -221,8 +234,8 @@ void var1(datetime*& Arr, datetime*& Ar1r2, int l)
 		} }
 		}
 		else{
-			if (Arr[n].year / 4 == 0) {
-				if (Arr[n].year / 100 == 0) { if (Arr[n].year / 400 == 0) {
+			if (Arr[n].year % 4 == 0) {
+				if (Arr[n].year % 100 == 0) { if (Arr[n].year % 400 == 0) {
 					if (Arr[n].day == 29) {
 						cout << "day : " << Arr[n].day << " "
 							<< "month : " << Arr[n].month << " "
@@ -293,47 +306,8 @@ void var1(datetime*& Arr, datetime*& Ar1r2, int l)
 		}
 	}
 }
-void sleds(timedelta*& Arr2, int ll)
-{
 
-}
-void sledd(datetime*& Ar1r2, int l)
-{
-	int a=-1;
-	
-
-		//iss >> ss1.day >> ss1.month >> ss1.year >> ss1.seconds >> ss1.minutes >> ss1.hours;
-	
-		//Ar1r2[i] = ss1;
-		for (size_t n = 0; n < l; n++)
-		{
-			a = den(Ar1r2[n].month, Ar1r2[n].day);
-			if (a == 0) { Ar1r2[n].day += 1;  }
-			else { if (Ar1r2[n].month == 12) { Ar1r2[n].year += 1;  Ar1r2[n].day = 1; Ar1r2[n].month = 1; } else{ Ar1r2[n].day = 1; Ar1r2[n].month += 1; } }
-		}
-
-}
-void predd(datetime*& Ar2r2, int l)
-{
-	int a = -1;
-
-
-	//iss >> ss1.day >> ss1.month >> ss1.year >> ss1.seconds >> ss1.minutes >> ss1.hours;
-
-	//Ar1r2[i] = ss1;
-	for (size_t n = 0; n < l; n++)
-	{
-		a = pden(Ar2r2[n].month, Ar2r2[n].day);
-		if (Ar2r2[n].day != 1) { Ar2r2[n].day -= 1; }
-		else { if (Ar2r2[n].month == 1) { Ar2r2[n].year -= 1;  Ar2r2[n].day = 31; Ar2r2[n].month = 12; } else { Ar2r2[n].day = a; Ar2r2[n].month -= 1; } }
-	}
-}
-void preds(timedelta*& Arr, int ll)
-{
-
-}
-
-int den(int s,int a)
+int den(int s,int a, int g)
 {
 
 	if (s != 2) {
@@ -351,9 +325,9 @@ int den(int s,int a)
 		}
 	}
 	else {
-		if (s / 4 == 0) {
-			if (s / 100 == 0) {
-				if (s / 400 == 0) {
+		if (g % 4 == 0) {
+			if (g % 100 == 0) {
+				if (g % 400 == 0) {
 					if (a == 29) {
 						return 1;
 					}
@@ -384,7 +358,7 @@ int den(int s,int a)
 
 }
 
-int pden(int s, int a)
+int pden(int s, int a, int g)
 {
 
 	if (s != 3) {
@@ -404,7 +378,7 @@ int pden(int s, int a)
 	}
 	else {
 		if (a == 1) {
-			if (vess(s) == 1) { return 29; }
+			if (vess(g) == 1) { return 29; }
 			else { return 28; }
 		}
 		else { return 0; }
@@ -414,9 +388,9 @@ int pden(int s, int a)
 
 int vess(int s)
 {
-	if (s / 4 == 0) {
-		if (s / 100 == 0) {
-			if (s / 400 == 0) {
+	if (s % 4 == 0) {
+		if (s % 100 == 0) {
+			if (s % 400 == 0) {
 				return 1;
 			}
 			else {
@@ -430,7 +404,7 @@ int vess(int s)
 	else {
 		return 0;
 	}
-	return 0;
+	
 }
 
 
